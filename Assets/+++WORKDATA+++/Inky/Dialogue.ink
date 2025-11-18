@@ -1,59 +1,85 @@
 ﻿-> start
 === start ===
-2 Unknown Guys look at you and Say "We are The Twins Alfred and Alfredo. Who are You"
+Alfred: We are the twins, Alfred and Alfredo.
+Alfredo: Yeah! So… who are you?
+
 -> main_talk
 
+
 === main_talk ===
-Fred (You): Hmm…
+Fred: Hmm…
 
-* "Im Fred, nice to meet You guys."
-    -> Welcome_Disscussion
+* "I'm Fred. Nice to meet you guys."
+    -> welcome_discussion
 
-* "Why Should I care?"
+* "Why should I care?"
     -> rude_discussion
+    
+* Player: "Piss off, idiots!"
+    -> die_discussion
 
-=== Welcome_Disscussion ===
-Alfred: "Welcome to this World."
-Alfredo: "We Love it here, but we dont know why."
 
-* "Did You guys find A way out?"
+
+=== welcome_discussion ===
+Alfred: Welcome to this world.
+Alfredo: We love it here… though we don’t really know why.
+
+Fred:
+
+* "Have you guys found a way out?"
     -> escape_discussion
 
-* "It is kinda nice here!"
-    -> Home_discussion
+* "Honestly, it's kinda nice here."
+    -> home_discussion
+
+
 
 === rude_discussion ===
-Alfred and Alfredo:" Dude that is not cool, we are just Chillin here!!!"
+Alfred: Dude, that's not cool.
+Alfredo: Yeah bro, we’re just chilling here!
 
-* "I Just wanna Leave!"
-    Alfred: "Okay, but there is no reason to be rude."
-    Alfredo: " Yeah thats right."
-    Fred (You): "Did you guys find a way out?" 
-    -> escape_discussion
+* "I just want to leave!"
+        Alfred: Okay… but you don’t have to be rude.
+        Alfredo: Yeah, seriously dude.
+        Fred: Have you at least found a way out?
+        -> escape_discussion
 
-* "I am sorry, I really need to calm down. Please let me introduce myself again"
-    -> main_talk
+* "Sorry. I need to calm down. Let me introduce myself again."
+        -> main_talk
 
-=== Home_discussion ===
-Alfredo: "Yeah we think the Same Way, right Alfred?"
-Alfred: "Yeah, It is so Mysterious Here."
+
+
+=== home_discussion ===
+Alfredo: We feel the same way! Right, Alfred?
+Alfred: Yeah, it's mysterious here.
 
 * "Mysterious? I LOVE THAT!"
-    Fred: "Mysterious? I LOVE THAT! I will stay here with you"
-    -> END
+        Fred: Mysterious? I LOVE THAT! I'll stay here with you guys.
+        -> END
 
-* "We Can Explore this world together."
-    Alfred and Alfredo:" Thats Dope Bro, lets do that."
-    -> END
+* "We can explore this world together."
+        Alfred: That’s dope, bro!
+        Alfredo: Let’s do it!
+        -> END
+
+
+
+=== die_discussion ===
+Alfred: That's it! You're dead! No one insults my brother!
+
+The twins eat you whole.
+-> END
+
+
 
 === escape_discussion ===
-Alfred: " Yeah bro, we saw the Exit just over there. It is not Far from here.
+Alfred: Yeah bro, we saw the exit just over there. It isn't far.
 
-* "Thank you, I will leave this Shitty World!"
-    Alfred: "Okay Dude, See you Around"
-    Alfredo: "Be careful there might be Monster luring around
-    Fred (You): "Thank you I will. bye."
-    -> END
+* "Thanks! I'm getting out of this weird world!"
+        Alfred: Alright dude, see you around.
+        Alfredo: Be careful… there might be monsters lurking out there.
+        Fred: Thanks. Bye.
+        -> END
 
-* "I Think I might Stay for a while if thats OK?"
-    -> Home_discussion
+* "Actually… I think I might stay for a while, if that’s okay?"
+        -> home_discussion
